@@ -1,4 +1,4 @@
-//pętla while
+//petla while
 
 var number = 10;
 
@@ -8,7 +8,7 @@ while(number > 0){
 
 var secretNumber = 2;
 /*
-while(prompt("Podaj liczbę") != secretNumber){//jest dostępna jako funkcja w obiektowym modelu przegladarce, możemy o coś zapytać. i uzyskać odpowiedć, np: Podaj liczbę i oczekuje na odpowiedz użytkownika
+while(prompt("Podaj liczbę") != secretNumber){//jest dostępna jako funkcja w obiektowym modelu przegladarce, możemy o cos zapytac. i uzyskac odpowiedć, np: Podaj liczbę i oczekuje na odpowiedz użytkownika
 
     alert("Nie trafiłeś!");
 
@@ -18,7 +18,7 @@ alert("Brawo!");
 
 */
 
-//pętla do while
+//petla do while
 
 number = 20;
 
@@ -27,13 +27,13 @@ do{
     number++; 
 }while(number > 30);
 
-//pętla for
+//petla for
 
 for(let i = 0; i <= 10; i++){
     console.log(i);
 }
 
-//pętla for in służy do iterowania po właściwościach obiektów
+//petla for in służy do iterowania po wlasciwosciach obiektow
 
 //tworzenie obiektu
 var person = {
@@ -46,7 +46,7 @@ var person2 = {
 
 };
 
-for(var key in person){ // for( key - nazwa zmiennej, ktr sobie tworzymy, przechodzi po nazwach zmiennej(kluczach, właściwościach) in person - nazwa obiektu)
+for(var key in person){ // for( key - nazwa zmiennej, ktr sobie tworzymy, przechodzi po nazwach zmiennej(kluczach, wlasciwosciach) in person - nazwa obiektu)
 
     console.log(key + ": " + person[key]);// person[key] przechodzenie po kluczch 
 

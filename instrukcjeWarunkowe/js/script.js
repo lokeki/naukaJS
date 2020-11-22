@@ -20,12 +20,12 @@ if(true)
     console.log("Jestem bez \"{}\"")
 
 
-// skrócony zapis if (operator warunkowy)
+// skrocony zapis if (operator warunkowy)
 
 var userName;
 
 userName = firstName ? firstName : "Nieznajomy";
-//do czego chcemy przypisać = warunek ? jeśli spełniony przypisujemy to : jeśli nie jst spełniony to to
+//do czego chcemy przypisac = warunek ? jesli spelniony przypisujemy to : jesli nie jst spelniony to to
 
 
 

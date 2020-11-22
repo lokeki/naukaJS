@@ -16,7 +16,7 @@ var imie = "Jan",
 var firstName = "Ania";
 var lastName = "Kowalska";
 
-var bookTitle = "\"Władca pierścieni\""; // \ wekslesz ucieczka
+var bookTitle = "\"Władca pierścieni\""; // \ <- ucieczka
 
 var multiLine = "Linijka pierwsza\nlinikja druga\n\ttrzecia linijka"; /* znaki ucieczki:
  \n - nowa linia 
@@ -40,7 +40,7 @@ if(isLoggedIn){
     console.log("Nie zalogowano");
 }
 
-/* Wartości fałszywe:
+/* Wartosci falszywe:
     - false
     - 0
     - ""
@@ -54,11 +54,12 @@ var yourName = null; // wartosc pusta typeof zwraca object
 
 //object
 var person = {
-    name: null // null przypisujemy, kiedy chcemy powiedziec że coś istnieje (ale nie ma nic przypisane) bo zwraca object a nie undefined
+    name: null // null przypisujemy, kiedy chcemy powiedziec że cos istnieje (ale nie ma nic przypisane) bo zwraca object a nie undefined
 };
 
-/* różnica między null a undefined
-    null - wartość jst ustawiona ale jest pusta
+/* 
+    roznica miedzy null a undefined
+    null - wartosc jst ustawiona ale jest pusta
     undefined - wartość nigdy nie została ustawiona
 */
 
@@ -88,7 +89,7 @@ var res7 = n1 % n2;
 //Potega
 var res8 = n1 ** n2;
 
-//Kolejnosc działań jak na matematyce
+//Kolejnosc działan jak na matematyce
 
 //Przypisywanie z np dodaniem
 n1 += n2;
@@ -103,7 +104,7 @@ var liczba = 123;
 
 console.log(liczba)
 
-//rzutowanie typów
+//rzutowanie typow
 var slowo = "słowo";
 var prawda = true;
 var falsz = false;
@@ -115,9 +116,9 @@ console.log(liczba + falsz);
 console.log(prawda.toString()); // rzutowanie na stringa
 
 
-"use strict" // sprawdza dokładnie kod js przed łąmaniem zasad js
+"use strict" // sprawdza dokladnie kod js przed lamaniem zasad js
 
-// hoisting wynoszenie deklaracji na samą górę, czyli najpierw możemy przypisać wartość zmiennej a później ją zadeklarować
+// hoisting wynoszenie deklaracji na samą gorę, czyli najpierw mozemy przypisac wartosc zmiennej a pozniej ja zadeklarowac
 abc = "ABC"
 
 var abc;

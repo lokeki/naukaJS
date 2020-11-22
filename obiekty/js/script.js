@@ -1,5 +1,5 @@
  //tablice asocjacyjne
- // Obiekty składaja sie z properies(wlasciwosi) i methods(metody)
+ // Obiekty skladaja sie z properies(wlasciwosi) i methods(metody)
 /*
  var person = {
      firstName: "Jan",
@@ -15,10 +15,10 @@ typy prymitywne:
 * String
 * Number
 * boolean
-mają one metody i wlaściwości
+mają one metody i wlasciwosci
 * null
 * undefined
-nie mają one metod i wlaściwości
+nie mają one metod i wlasciwosci
 
 Obiekty:
 * wszystko inne XD
@@ -32,32 +32,32 @@ Obiekty:
      age: 32
  };
 
- //odwoływanie się do wlasciwosci person
+ //odwolywanie się do wlasciwosci person
  console.log( person.firstName);
 
- //odwoływanie się do wlasciwosci person, jeśli jest zapisany jako string
+ //odwolywanie się do wlasciwosci person, jesli jest zapisany jako string
  //obiekt["nazwaproperies"]
  console.log(person["last-name"]);
 
  //dopisywanie properies w object
- // a dokładniej: dopisywanie do object key and value pairs
+ // a dokladniej: dopisywanie do object key and value pairs
  person.job = 'programista';
  // to samo
  person["job"] = "programista";
  console.log(person);
 
- //usówanie keys w object
+ //usuwanie keys w object
  delete person.age;
  console.log(person);
 
- // przekazywanie obiektów przez referencje
+ // przekazywanie obiektow przez referencje
  var person2 = person;
  
  person2.age = 23;
  console.log(person);
-// poprzez referencje oznacza to, że działamy na poprzedniej zmiennej w tym przykładzoe na person, czyli zmieniajac dane w person2, zmieniamy dane w person. (mają to samo miejsce w pamieci)
+// poprzez referencje oznacza to, ze dzialamy na poprzedniej zmiennej w tym przykladzoe na person, czyli zmieniajac dane w person2, zmieniamy dane w person. (mają to samo miejsce w pamieci)
 
-// jak działają funkcje
+// jak dzialaja funkcje
 var person3 = {
     firstName3: "Jan",
     lastName3: "Kowalski",
@@ -76,5 +76,5 @@ var person4 = {
     lastName3: "Kowalski"
 };
 
-//porównywanie obiektów
+//porownywanie obiektow
 //for in
