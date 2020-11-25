@@ -249,7 +249,7 @@ var resultNumber = arrNumbers.filter((myNumber) => {
 
 // po stringach test filter()
 
-document.write("<br/> Fil: " + resultNumber);
+document.write("<br/> Fil: " + resultNumber + "<br/>");
 
 var words = ["keyboard", "mouse", "speaker", "microphone"];
 
@@ -362,39 +362,54 @@ let seas = ['Black Sea', 'Caribbean Sea', 'North Sea', 'Baltic Sea'];
 // 1.1 Dodaj element 'Red Sea' na końcu talbicy 
 
 seas.push('Red Sea');
-console.log(`Zadanie 1, tablica seas: ${seas}`);
+document.write(`Zadanie 1.1: tablica seas: ${seas} <br/>`);
 
 // 1.2 Dodaj element 'Mediterranean Sea' na początku talbicy
 
-
+seas.unshift('Mediterranean Sea');
+document.write(`Zadanie 1.2: tablica seas: ${seas} <br/>`);
 
 // 1.3 Znajdź indeks 'Caribbean Sea'
 
-
+seas.indexOf('Caribbean Sea');
+document.write(`Zadanie 1.3: index 'Caribbean Sea': ${seas.indexOf('Caribbean Sea')} <br/>`);
 
 // 1.4 Usuń 'Caribbean Sea' z tablicy
 
-
+seas.splice(seas.indexOf('Caribbean Sea'), 1);
+document.write(`Zadanie 1.4: tablica seas: ${seas} <br/>`);
 
 // 1.5 Wyświetl długość tablicy
 
-
+document.write(`Zadanie 1.5: dlugosc tablicy seas: ${seas.length} <br/>`);
 
 // 1.6 Wyświetl wszystkie elementy w pętli for
 
+document.write(`Zadanie 1.6: elementy tablicy:<br/>`);
+seas.forEach((value) => {
+    document.write(`- ${value} <br/>`);
+})
 
+//albo
+document.write(`Zadanie 1.6: inna wersja kodu, elementy tablicy: <br/>`);
+for(let i = 0; i < seas.length; i++){
+    document.write(`- ${seas[i]} <br/>`);
+}
 
 // 1.7 Posortuj alfabetycznie
 
-
+seas.sort();
+document.write(`Zadanie 1.7: posortowana tablica seas: ${seas} <br/>`);
 
 // 1.8 Usuń ostatni element
 
-
+seas.pop();
+document.write(`Zadanie 1.8: tablica seas: ${seas} <br/>`);
 
 // 1.8 Usuń pierwszy element
 
-
+seas.shift();
+document.write(`Zadanie 1.9: tablica seas: ${seas} <br/>`);
 
 // Zadania 2
 
@@ -412,7 +427,11 @@ var fruits = [["banana", 5, "yellow"], ["apple", 3, "red"], ["mango", 7, "orange
 // "cherry costs 10 pln"
 // "orange costs 5 pln"
 
-
+document.write(`<br/> Zadanie 2.1: w konsoli <br/>`);
+console.log("Zadanie 2.1:");
+fruits.forEach(([name, price, color]) => {
+    console.log(`${name} costs ${price} pln`);
+});
 
 
 // 2.2 
@@ -420,9 +439,12 @@ var fruits = [["banana", 5, "yellow"], ["apple", 3, "red"], ["mango", 7, "orange
 // Wynik powinien wygladać następująco:
 // ["banana", "apple", "mango", "pear", "cherry", "orange"]
 
+var result22 = fruits.map(([name, price, color]) => {
+    return name;
+});//tu zapisz wynik 
 
+document.write("Zadanie 2.2: Tablica result22" + result22 + "<br>"); 
 
-var result22 //tu zapisz wynik 
 
 
 // 2.3 
@@ -451,11 +473,11 @@ var result25;
 
 var result26;
 
-document.write("<br/>Wynik 2.2: " + result22 + "<br>"); 
-document.write("Wynik 2.3: " + result23 + "<br>"); 
-document.write("Wynik 2.4: " + result24+ "<br>"); 
-document.write("Wynik 2.5: " + result25+ "<br>"); 
-document.write("Wynik 2.6: " + result26+ "<br>"); 
+
+document.write("Zadanie 2.3: " + result23 + "<br>"); 
+document.write("Zadanie 2.4: " + result24+ "<br>"); 
+document.write("Zadanie 2.5: " + result25+ "<br>"); 
+document.write("Zadanie 2.6: " + result26+ "<br>"); 
 
 // Zadania 3
 

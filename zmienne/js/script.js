@@ -119,6 +119,7 @@ console.log(prawda.toString()); // rzutowanie na stringa
 "use strict" // sprawdza dokladnie kod js przed lamaniem zasad js
 
 // hoisting wynoszenie deklaracji na samą gorę, czyli najpierw mozemy przypisac wartosc zmiennej a pozniej ja zadeklarowac
+//nie mozna const, let
 abc = "ABC"
 
 var abc;
@@ -126,3 +127,5 @@ var abc;
 // wiele zmiennych
 var a = b = c = 15;
 console.log(a, b, c);
+
+//const niezmienna nie mozna zmienic wartosci, jak sie ja raz zadeklaruje
