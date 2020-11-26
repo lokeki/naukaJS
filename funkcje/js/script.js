@@ -160,10 +160,65 @@ function sum(num1, num2) {
     */
    if(arguments.length == 2 && typeof num1 === "number" && typeof num2 === "number"){
         return num1 + num2;
+    } else {
+        return "Podaj poprawne argumenty";
     }
 
 }
 console.log(sum(2, 5));
+
+function sum2(){
+
+    let total = 0;
+    for(let i = 0; i < arguments.length; i++){
+        total += arguments[i]
+    }
+    return total;
+}
+
+console.log("script.js sum2: " + sum2(2, 3, 4, 5, 6));
+
+// Funkcje anonimowe
+(function() {
+    var arr = [1, 45, 22, 31, 3];
+
+    arr.sort((a, b) => a - b); // jest tu funkcja anonimowa, tzn ze nie ma zadnej nazwy
+    //przydaje sie gdy raz chcemy wykorzystac jakas funkcjie
+    document.write(arr);
+    
+    
+    //Przekazywanie funkcji 
+    
+    function sayHelloF(text, getName) {
+        return text + getName()
+    }
+    
+    document.write("<br/>Funkcja sayHelloF: " + sayHelloF("Witaj ", () => "Piotr")); //przekazujemy referencje do getName w funkcji sayHelloF i potem jaj wywolujemy poprzez getName()
+    
+})();//to jest funkcja self-invoking anonymous function, czyli samowywolujaca sie funkcja anonimowa 
+//teraz zmienne dostepne w funkcji na gorze nie sa dostepne globalnie
+//nawiasy () oplatajace cala funkcje sprawiaja ze jest ona wyrazeniem, a nawiasy na koncu (); wywoluja funkcje
+
+//niektore wbudowane globalne funcje 
+
+//eval() nie uzywamy, jesli naprawde nie musimy
+//przyjmuje text, ktr jst kodem
+//eval('alert("Witaj")');
+
+//isFinite zwraca true, false sprawdza czy liczba jst liczba skonczona
+document.write("<br/>" + isFinite(15));
+
+//isNaN() czy jest NaN
+document.write("<br/>" + isNaN(2 * undefined));
+
+//parseFloat() pozwala ze string zrobic liczbe zmiennoprzecinkowa
+document.write("<br/>" +  typeof parseFloat("20.4zl"));//wycina litery
+
+//parseInt() jak wyzej tylko na calkowite
+document.write("<br/>" +  typeof parseInt("20.4zl"));
+
+//alert() funkcja dostepna poprzez obiektowy model dokumentu
+//alert("Witaj");
 
 
 

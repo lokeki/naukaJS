@@ -78,5 +78,83 @@ function sumByReduce(...param) { //zamieniamy parametry na tablice
 const mySum = sumByReduce(1,2,3,4,5,6,7);
 console.log(mySum);
 
+function wordDescription(word, desc) {
+    return word + " - " + desc;
+};
+
+console.log(wordDescription('stol', 'okragly'));
+
+//silnia
+function factorial(num) {
+    //moje
+    let result = num;
+    for(let i = num - 1; i > 0; i--){
+        result *= i;
+    }
+    return result;
+    /*
+    inne
+    for(let j = 1; j <= num; i++){
+        result *= i;
+    }
+    return result;
+    */
+}
+
+console.log(factorial(3));
+
+//podstawa do potegi
+function pow(base, exp) {
+    console.log(base ** exp);
+    return base ** exp;
+    // z for
+    let result = base;
+    for(let i = exp; i > 1; i--){
+        result *= base;
+    }
+    return result;
+
+}
+
+console.log(pow(5, 5)); 
+//const base = Number(prompt('Podaj podstawowe potegi')); //zmiana na liczbe
+//const exp = parseInt(prompt('Podaj wykladnik potegi'));// zmiana na liczbe
+//pow(base, exp);
+
+//dwumian Newtona n!/k! * (n - k)!
+function binominal(n, k){
+    let result = factorial(n)/(factorial(k) * factorial(n-k));
+    console.log(result);
+    return result;
+}
+
+binominal(5, 3);
+
+//zamiana elementow w tablicy
+function change(tab, ind1, ind2){
+    //moje
+    [tab[ind1], tab[ind2]] = [tab[ind2], tab[ind1]];
+    return tab;
+    //inne
+    var temp = tab[ind1];
+    tab[ind1] = tab[ind2];
+    tab[ind2] = temp;
+    return tab;
+
+}
+
+const tab = ['ab', 'cd', 'ef', 'gh', 'ij']
+console.log(change(tab, 1, 2));
+
+
+/*hoisting
+console.log({x});
+console.log({a});
+console.log({b});
+
+var x = 1;
+const a = 10;
+let b = 2;
+*/
 
 //TODO collback 
