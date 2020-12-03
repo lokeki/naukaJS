@@ -84,3 +84,37 @@ for(var i = 0; i < numbers.length; i++){
         break;
     }
 }
+
+//for...in obiekty i tablice
+var person = {
+    fname: "John",
+    lname: "Doe", 
+    age: 25
+};
+var text = "";
+var x;
+for (x in person){
+    text += person[x];
+}
+console.log(text);
+
+//for...of dziala dla tablic
+
+var car = ["BMW", "Volvo", "Mini"];
+var x;
+for(x of car){
+    document.write(x + "<br/>");
+}
+
+//for w for
+var array = [
+    ['apple', 'orange', 'pear'],
+    ['carrots', 'beans', 'peas'],
+    ['cookies', 'cake', 'muffins', 'pie']
+]
+
+for(let i = 0; i < array.length; i++){
+    for(let j = 0; j < array[i].length; j++){
+        console.log(array[i][j]);
+    }
+}

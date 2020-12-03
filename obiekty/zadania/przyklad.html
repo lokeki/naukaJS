@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Do urodzin pozostało: </p>
+    <h2 id="ile"></h2>
+    <script>
+
+        setInterval(function(){
+            var dzis = Date.now();
+            console.log({dzis, Date})
+
+            var urodziny = new Date(2021, 9, 6, 0, 0, 0);
+            console.log({dzis, urodziny});
+
+            var urodzinyTimestamp = urodziny.getTime();
+
+            console.log({dzis, urodziny, urodzinyTimestamp});
+
+            var roznicaMs = urodzinyTimestamp - dzis;
+            var rozniceS = Math.round(roznicaMs / 1000)
+
+            console.log({roznicaMs, rozniceS});
+
+            var roznicaMin = Math.round(rozniceS / 60);
+
+            console.log({roznicaMs, rozniceS, roznicaMin});
+
+            var roznicaH = Math.round(roznicaMin / 60);
+
+            console.log({roznicaMs, rozniceS, roznicaMin, roznicaH});
+
+            var roznicaD = Math.ceil(roznicaH / 24);
+
+            console.log({roznicaMs, rozniceS, roznicaMin, roznicaH, roznicaD});
+
+            var roznicaT = Math.ceil(roznicaD / 7);
+            
+            document.getElementById('ile').innerText = rozniceS + 'sekund, czyli ' + roznicaMin + 'minut, czyli ' + roznicaH + ' godzin, czyli ' + roznicaD + ' dni, czyli ' + roznicaT + 'tygodni';
+
+            console.log({roznicaMs, rozniceS, roznicaMin, roznicaH, roznicaD, roznicaT});
+        }, 1000);
+
+
+
+    </script>
+</body>
+</html>

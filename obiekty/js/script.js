@@ -78,3 +78,20 @@ var person4 = {
 
 //porownywanie obiektow
 //for in
+
+//destrukturyzacja obiektu
+
+const obiekt = {
+    klucz1: 'wartosc',
+    klucz2: 'wartosc',
+    klucz3: 'wartosc',
+    klucz4: {
+        klucz5: 'wartosc'
+    }
+};
+
+console.log(
+obiekt.klucz1,nobiekt.klucz3, obiekt.klucz2)
+
+const {klucz1, klucz3, klucz2, klucz4={klucz5}} = obiekt
+console.log(klucz1, klucz3, klucz2)

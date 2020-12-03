@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //napisz fn, ktora obliczy dzien poprzedni od aktualnego lub podanego
+
+        const getYesterday = (date = new Date(Date.now())) => new Date(new Date(date).getTime() - (1000 ))
+
+        //getYesterday() -> 29 listopada 2020
+        //getYesterday('Now 15, 2014') -> nov 14 2014
+
+    </script>
+</body>
+</html>

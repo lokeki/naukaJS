@@ -4,7 +4,7 @@
 
 var firstNameZ = "Karol";
 
-hello();
+//hello();
 
 function superSum(...args){
     console.log(args);
@@ -157,4 +157,12 @@ const a = 10;
 let b = 2;
 */
 
-//TODO collback 
+//funkcja rekurencyjna
+function odliczanie(i){
+    console.log('Wypisz ' + i);
+    if(i > 0){
+        odliczanie(--i);
+    }
+}
+
+odliczanie(10);

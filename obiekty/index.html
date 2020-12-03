@@ -5,9 +5,46 @@
     <meta name="viewport" content="width=
     , initial-scale=1.0">
     <title>obiekty</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        div {
+            line-height: 100vh;
+            text-align: center;
+            font-size: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        span {
+            font-weight: bold;
+            font-family: monospace;
+        }
+
+    </style>
 </head>
 <body>
     
+    <div class='clock'>Aktualne godzina: 
+        <span></span>
+    </div>
+    <script>
+        const clock = () => { 
+            const time = new Date();
+            const second = time.getSeconds() < 10 ? "0" + time.getSeconds() : time.getSeconds();
+            const minute = time.getMinutes() < 10 ? "0" + time.getMinutes() : time.getMinutes();
+            const hours = time.getHours() < 10 ? "0" + time.getHours() : time.getHours();
+            console.log({second, minute, hours});
+
+            document.querySelector('.clock span').textContent=`${hours}:${minute}:${second}`;
+        }
+
+        setInterval(clock, 1000) //uruchamia funkcje co jakas czesc czasu tu np co sekunde
+    </script>
+
     <script src="js/script.js"></script>
+    <script src="js/script2.js"></script>
 </body>
 </html>
