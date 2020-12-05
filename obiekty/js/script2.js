@@ -60,7 +60,7 @@ console.log(kolejnyKubek)
 const string = new String('javascript')
 console.log(string)
 
-const string1 = 'javastring'
+const string1 = 'javascript'
 
 console.log(string === string1)
 console.log(string == string1)

@@ -91,7 +91,7 @@ const obiekt = {
 };
 
 console.log(
-obiekt.klucz1,nobiekt.klucz3, obiekt.klucz2)
+obiekt.klucz1, obiekt.klucz3, obiekt.klucz2)
 
 const {klucz1, klucz3, klucz2, klucz4={klucz5}} = obiekt
 console.log(klucz1, klucz3, klucz2)

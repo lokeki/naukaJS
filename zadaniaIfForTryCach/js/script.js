@@ -81,7 +81,7 @@ const borderWithText = (text) => {
     
     console.log(textWithBorder);
 }
-borderWithText(prompt("Wpisz tekst: ")); //TODO prompt() and slice()
+borderWithText(prompt("Wpisz tekst: "));
 
 /* Zadanie 4
 Zrób losowanie 10 liczb z przedziału 1-10. Wypisz je w konsoli. Jeżeli przynajmniej połowa z nich jest większa niż 5, wtedy w konsoli wypisz tekst `udało się`, w przeciwnym razie wypisz w konsoli tekst `niestety nie tym razem`.

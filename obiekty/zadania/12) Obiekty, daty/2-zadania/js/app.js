@@ -1,3 +1,4 @@
+/*
 const spaceShip = {
   name: "Enterprise",
   currentLocation: "Earth",
@@ -33,3 +34,4 @@ const spaceShip = {
 spaceShip.showInfo();
 
 spaceShip.meetClingon();
+*/
