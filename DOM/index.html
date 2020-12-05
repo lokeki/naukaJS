@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--<div class='yellow'></div>
+
+    <div class='yellow'></div>
+
+    <div class='yellow'></div>
+
+    <div class='yellow'></div>
+
+    <div class='yellow'></div>-->
+
+    <!--<p>best</p>
+    <p id='best'>best best</p>
+    <p>best</p>-->
+
+    <div class='remove'>a</div>
+    <div class='remove'>b</div>
+    <div class='remove'>c</div>
+    <div class='remove'>d</div>
+    <div class='remove'>e</div>
+
+    
+
+    <script>
+
+        //szukanie
+        /*const elements = document.getElementsByClassName('yellow')
+
+        //const elements = document.querySelectorAll('.yellow')
+
+        const firstElement = elements[0]
+        const secondElement = elements[1]
+        const lastElement = elements[elements.length - 2]
+
+
+        const body = document.getElementsByTagName('body')[0].innerHTML
+
+
+
+        console.log({firstElement, secondElement, elements, lastElement, body})*/
+
+        
+        /*
+        const bestEl = document.getElementById('best');
+        // const bestEl = document.querySelector('#best')
+
+        const elBeforeBest = bestEl.previousElementSibling
+        const elAfterBest = bestEl.nextElementSibling
+        const parentBest = bestEl.parentElement
+
+        console.log({elBeforeBest, elAfterBest, parentBest})
+        */
+
+        //usuwanie
+
+        //const removeEls = document.getElementsByClassName('remove') trzeba by bylo zamienic na tablice
+        const removeEls = document.querySelectorAll('.remove')
+
+        // poprzez for
+
+        
+        for(let i = 0; i < removeEls.length; i++){
+            console.log(i)
+            removeEls[i].remove()
+            //body.remove(removeEls[i])
+        }
+
+        //konkretny element
+        //removeEls[0].remove()
+
+        //tworzenie elementu
+
+        const div1 = document.createElement('div')
+        const div2 = document.createElement('div')
+        const div3 = document.createElement('div')
+
+        const createElFn = ({tag, nr, className, text})=>{
+            const arrOfEls = []
+            for(let i = 0; i < nr; i++){
+                let element = document.createElement(tag)
+                element.className = className
+                element.text = text
+                //element.setAttribute('class', className)
+                arrOfEls.push(element)
+            }
+            return arrOfEls
+        }
+
+        const arrOfDivs = createElFn({tag: 'div', nr: 5, text: 'text', className: 'remove'})
+
+        console.log(arrOfDivs)
+
+        const body = document.getElementsByTagName('body')[0]
+        for(let i = 0; i < arrOfDivs.length; i++){
+            body.appendChild(arrOfDivs[i])
+        }
+
+
+        //zadanie 
+
+        const div = document.createElement('div')
+        div.setAttribute('id', 'best')
+
+        body.appendChild(div)
+
+        const span1 = document.createElement('span');
+        const span2 = document.createElement('span');
+        const span3 = document.createElement('span');
+
+        div.appendChild(span1)
+        div.appendChild(span2)
+        div.appendChild(span3)
+        
+        const p1 = document.createElement('p')
+        const p2 = document.createElement('p')
+
+        div.prepend(p1)
+        div.appendChild(p2)
+
+
+    </script>
+</body>
+</html>

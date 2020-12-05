@@ -165,3 +165,77 @@
     
 })/*()*/;
 
+//Math
+
+(()=>{
+
+    console.log(Math.abs(-22)); //zwraca wartosc absolutna
+
+    console.log(Math.round(22.5234)); // zwykle zaokraglenie jak w matematyce
+
+    console.log(Math.ceil(22.02)); // zaokragla w gore (sufit)
+
+    console.log(Math.floor(42.89)); //zaokragle w dol (podloga)
+
+    console.log(Math.max(3, 5, 1, 6, 0)); // zwraca najwieksza
+
+    console.log(Math.min(33, 123, 5, 10)); // zwraca najmniejsza
+
+    console.log(Math.round(Math.random() * 10)); // round() zwraca losowa liczbe z przedzialu 0-1, tutaj zaokraglemy jeszcze liczbe * 10
+
+})();
+
+//Date
+
+var d = new Date(); // zwraca obiekt data, zalezy co jest zawarte w systemie
+// jesli uzywamy new mozemy wtedy podac dodatkowe parametry w nawiasie, bez new tez zwroci date, ale wtedy parametry w nawiasie zostana zignorowane
+
+var d2 = new Date(12131323); // w nawiasie sekundy, od roku 1970
+
+var d3 = new Date(2015, 0); // ustawiamy konkretna date
+//new Date(rok, miesiac, dzien, h, min, s )
+//miesiace sa indeksowane od 0
+
+// metody
+
+console.log(d3.getFullYear()); // rok (number)
+
+console.log(d3.getMonth()); // miesiac
+
+console.log(d3.getDate()); // dzien
+
+console.log(d3.getHours()); // godzina
+
+console.log(d3.getMinutes()); // minuty
+
+console.log(d3.getMilliseconds()); // milisekundy
+
+console.log(d3.getDay()); // dzien tygodnia (normalnie)
+
+console.log(d3.getTime()); // sekundy od 1970
+
+// jak chcemy zmienic to stotujemy set..()
+
+console.log(d3.toString()); // zwraca stringa
+
+console.log(d3.toLocaleString()); 
+
+// formatowanie
+
+console.log(d.getDate() + "." + (d.getMonth() + 1) + "." + d.getFullYear());
+
+
+
+//RegExp
+
+//var regex = /a+/gi; // wszytskie ktr maja przynajmniej jedna literke a, dzialajac globalnie
+
+var regex = new RegExp('a+', 'ig'); // tak jak u gory
+
+var n = "ania";
+
+console.log(n.replace(regex, 'p'));
+
+console.log(regex.test('kojelka')); // jesli jest a to true
+
+

@@ -3,13 +3,14 @@
 const a = { marka: "Skoda"};
 const b = Object.assign({}, a); //kopiujemy a do b za pomoca Object.assign()
 
-b.marka = "Opel"; // zmieniamy i nie zmieniamy wartosci w a
+b.marka = "Opel"; // zmieniamy wartosc w b, ale nie zmieniamy wartosci w a
 
 //Obiekt Date
 var czas = new Date()
 
 czas.getTime() //zwraca aktualny czas
 
+//przyklady/cwiczenia
 
 var kubek = {
     kolor: "Niebieski"
@@ -95,5 +96,4 @@ const sredniaWyplata = (sumaWyplat / ilosc).toFixed(2)
  
 console.log({sumaWyplat, wyplaty, ilosc, sredniaWyplata})
 
-//zegarek
 

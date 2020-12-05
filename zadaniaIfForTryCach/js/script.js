@@ -75,7 +75,7 @@ const borderWithText = (text) => {
         if(j === 1 && text.length < 20){
             textWithBorder += `║  ${text}  ║\n`;
         }else if(j === 1 && text.length >= 20) {
-            textWithBorder += `║  ${text.slice(0, 20)}  ║\n`;
+            textWithBorder += `║  ${text.slice(0, 20)}...  ║\n`;
         }
     }
     
