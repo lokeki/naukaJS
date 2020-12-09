@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="result" style="width: 200px; height: 200px; background-color: yellow;">
+        Zrób coś myszką
+    </div>
+    <p id="output"></p>
+
+    <script>
+
+        const parOutput = document.querySelector('#output');
+
+        const divResult = document.querySelector('#result');
+
+
+        // fn kiedy najade na diva
+        function mouseOver(e){
+            parOutput.innerText = ` mauseOver, ${event.clientX}, ${event.clientY}`; // z eventu pobieramy pozycje myszki
+        }
+        divResult.addEventListener('mouseover', mouseOver)
+
+        // fn kiedy wyjde za div
+        function mouseOut(e){
+            parOutput.innerText = ` mauseOut, ${event.clientX}, ${event.clientY}`; // z eventu pobieramy pozycje myszki
+        }
+        divResult.addEventListener('mouseout', mouseOut)
+
+
+        // fn poruszanie po divie
+
+        function mouseMove(e){
+            parOutput.innerText = ` mauseMove, ${event.clientX}, ${event.clientY}`; // z eventu pobieramy pozycje myszki
+        }
+        divResult.addEventListener('mousemove', mouseMove)
+
+    </script>
+
+</body>
+</html>

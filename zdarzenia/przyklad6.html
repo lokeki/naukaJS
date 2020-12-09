@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+
+        <select id='options' name='options'>
+            <option value='a'>A</option>
+            <option value='b'>B</option>
+            <option value='c'>C</option>
+        </select>
+    </form>
+
+    <script>
+//fn, ktora po wybraniu opcji wyswietli alert z wybrana opcja
+
+        const select = document.querySelector('#options');
+
+        select.addEventListener('change', (e) => {
+            let result = e.target.value;
+            console.log(result);
+            alert(document.forms[0].options.value)
+        })
+
+    </script>
+
+</body>
+</html>

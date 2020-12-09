@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input id='name' type="">
+
+
+
+    <script>
+        //napisz fn, ktr sprawi ze tresc inputa zmieni sie na duze
+
+        let input = document.querySelector('#name')
+
+        input.addEventListener('blur', function(e) { // 'blur' opuszczenie okienka
+            let result = e.target.value;
+
+            input.value = result.toUpperCase();
+        })
+
+    </script>
+
+</body>
+</html>

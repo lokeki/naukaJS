@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class='parent'>
+        <button class='button'>kliknij mnie</button>
+    </div>
+
+    <script>
+
+        const btn = document.querySelector('.button');
+
+        const fn = function fnName () {
+            console.log('kliknalem na element');
+            console.log(this);
+        }
+
+
+        btn.addEventListener('click', fn)
+
+
+        btn.addEventListener('click', function() {
+            console.log('kliknalem na element');
+            console.log(this);
+        })
+
+        /*
+        btn.addEventListener('click', () => {
+            console.log('kliknalem na element');
+            console.log(this); //this jst window
+        })
+
+        let counter = 0;
+        const elementClick = () => {
+            counter++;
+            btn.innerText = `kliknales ${counter} razy`;
+
+            counter >= 5 && btn.removeEventListener('click', elementClick);
+        }
+
+        btn.addEventListener('click', elementClick);
+        */
+
+        const div = document.querySelector('.parent')
+
+        div.addEventListener('click', e => {
+            console.log(e.target, e.currentTarget);
+            console.log('div')
+        })
+
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            console.log(e.target, e.currentTarget);
+            console.log('btn');
+        });
+
+        //przypisywanie zdarzen w inny sposob
+
+        btn.onclik = fn;
+
+
+    </script>
+
+</body>
+</html>

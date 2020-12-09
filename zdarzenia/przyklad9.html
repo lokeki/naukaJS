@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="div1">
+        <p id="p1">this is a paragraph</p>
+        <p id="p2">this is another paragraph</p>
+        <!-- trzeci paragraf o id p3 -->
+    </div>
+
+    <script>
+
+        const div1 = document.querySelector('#div1');
+
+        let p3 = document.createElement('p');
+        p3.setAttribute('id', 'p3');
+        p3.innerText = 'Tekst';
+        console.log(p3)
+
+        div1.appendChild(p3);
+
+    </script>
+
+</body>
+</html>

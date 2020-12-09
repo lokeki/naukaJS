@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onresize="getSize()" onload="getSize()">
+    
+    <script>
+        function getSize(){
+            const w = window.innerWidth; // szerokosc
+            const h = window.innerHeight; // wysokosc
+            console.log({w, h})
+        }
+
+        //inny sposob
+        
+        //const body=document.body;
+        /*
+        1.
+        body.addEventListener('resize', getSize);
+        body.addEventListener('load', getSize);
+        */
+
+        /*
+        2.
+        body.onload = getSize;
+        body.onresize = getSize;
+        */
+
+    </script>
+
+</body>
+</html>

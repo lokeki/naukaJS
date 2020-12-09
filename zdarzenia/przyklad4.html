@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id='myButton'>
+        zmien kolor
+    </button>
+
+    <script>
+        //fn, ktr na nacisniecie buttona zmieni kolor tla strony na kolor niebieski
+
+        const btn=document.querySelector('#myButton');
+
+        btn.addEventListener('click', () => {
+            btn.parentNode.setAttribute('style', `background: rgb(${randomColor(255)}, ${randomColor(255)}, ${randomColor(255)});`)
+        })
+
+        const randomColor = (number) => {
+            return Math.floor(Math.random() * number + 1)
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table id="myTable"> 
+        <tbody>
+            <tr>
+                <td>row0-col0</td> 
+                <td>row0-col1</td>
+            </tr> 
+            <tr>
+                <td>row1-col0</td> 
+                <td>row1-col1</td>
+            </tr> 
+            <tr>
+                <td>row2-col0</td> 
+                <td>row2-col1</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <input type="button"  value="Change content"> 
+
+    <script>
+
+        // input fn -> zmienia wartosc kom w tab, pobieramy dane kom z promp
+
+        const input = document.querySelector("input[type='button']");
+
+        input.addEventListener('click', function(){
+
+            const r = parseInt(prompt("Podaj rzad: ", ''));
+            const td = parseInt(prompt("Podaj td: ", ''));
+            const text = prompt("Podaj tresc: ", '');
+
+            // if czy podal liczbe i dopiero uzupelnienie
+
+            // istniejacy rzad informacja stworzyc nowy rzad na dole, czy tam gdzie chce?
+
+            const table = document.querySelector('#myTable');
+            table.rows[r].cells[td].innerText = text;
+
+        })
+
+
+
+    </script>
+    
+</body>
+</html>
