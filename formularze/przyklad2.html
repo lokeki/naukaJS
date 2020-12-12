@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit="return validate()">
+      <fieldset>
+        <label>name</label>
+        <input id="name" type="text" /> <br />
+
+        <label>user name</label>
+        <input id="username" type="text" /><br />
+        <label>gender</label><br />
+        <label>male</label>
+        <input type="radio" name="gender" />
+        <br />
+        <label>female</label>
+        <input type="radio" name="gender" />
+        <br />
+
+        <label>Owoce</label>
+        <br />
+        <label>jagoda</label>
+        <input type="checkbox" value="jagoda" name="fruit" />
+        <br />
+        <label>arbuz</label>
+        <input type="checkbox" value="orbuz" name="fruit" />
+      </fieldset>
+      <input type="submit" />
+    </form>
+
+    <script>
+
+        function validate(){
+            const name = document.getElementById('name');
+            if(name.length <= 3){
+                return false;
+            }
+            const uname = document.getElementById('username');
+            if(uname.length <= 3){
+                return false;
+            }
+            return true;
+        }
+
+    </script>
+  </body>
+</html>

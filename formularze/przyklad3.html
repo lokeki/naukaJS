@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="" action="https://example.com" method="GET">
+        <label>email</label>
+        <input id="email" type="email" /> 
+        <br />
+        <label>user name</label>
+        <input id="username" type="text" /><br />
+        <label>gender</label><br />
+        <label>male</label>
+        <input type="radio" name="gender" />
+        <br />
+        <label>female</label>
+        <input type="radio" name="gender" />
+        <br />
+
+        <label>Owoce</label>
+        <br />
+        <label>jagoda</label>
+        <input type="checkbox" value="jagoda" name="fruit" />
+        <br />
+        <label>arbuz</label>
+        <input type="checkbox" value="orbuz" name="fruit" />
+      </fieldset>
+      <input type="submit" />
+    </form>
+    </form>
+
+    <script>
+
+        const email = document.querySelector('#email');
+        const pwd = document.querySelector('#pwd');
+        const checkbox = document.querySelector('#checkbox')
+        const buttonek = document.querySelector('#buttonek')
+        
+        function sendFrom(){
+
+       
+        buttonek.addEventListener('click',function(e){ 
+        e.preventDefault()
+        const emailValue = email.value;
+        const pwdValue = pwd.value;
+        const checkboxChecked = checkbox.checked;
+        const regex = /^[A-Z][a-z][A-Za-z]*$/;
+             /* console.log(emailValue,pwdValue,checkboxChecked)
+             console.log(emailValue.length > 8)
+             console.log(pwdValue.match(regex))
+             console.log(emailValue.indexOf('@') !== -1)
+             */
+             
+    
+             if(emailValue.length > 8 && pwdValue.match(regex) && emailValue.indexOf('@') !== -1 && pwdValue.length > 8){ 
+                   alert('Fine!')
+                   return true;
+             }   
+             else { 
+                alert('Forgotten email or pwd?')
+                return false;
+             }
+            }
+
+        }
+        </script>
+
+
+
+</body>
+</html>
