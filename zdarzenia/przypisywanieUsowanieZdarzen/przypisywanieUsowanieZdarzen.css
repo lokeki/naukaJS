@@ -1,0 +1,14 @@
+#btn3 {
+    width: 100px;
+    height: 20px;
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 10px;
+    background-color: #72FF00;
+
+    cursor: pointer;
+
+    font: 14px/20px Tahoma, Arial, sans-serif;
+    text-align: center;
+    color: #439801;
+}
