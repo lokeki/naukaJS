@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div></div>
+
+    <script>
+
+        //document ready
+        $(document).ready(function(){
+            // cialko funkcji
+        })
+        
+        // krocej
+        $(function(){
+            //cialko funkcji
+        });
+
+        //skladnia lancuchowa, mozemy pisac po kropce
+        $('#btn')
+            .css({background: 'blue'})
+            .delay(2000)
+            .slideUp()
+            .delay(1000)
+            .fadeIn(1000)
+
+        //zmienne
+        const $div = $('div'); // z jquery
+        const div = document.querySelector('div'); // js
+
+        $div.find('span').css('color','red');
+        $div.classList.ass('btn') // tez blad
+
+        div.innerText = 'klik';
+        div.find() // blad, nie mozna laczyc
+
+        //pobieranie elementow
+        $('div') // pobieramy wszystkie div
+        $('div.czerwony')
+        $('div p')
+
+        // inne metody
+        $('div').find('span')
+        $('button').eq(2);
+        $('span').first()
+        $('div strong').last()
+        $('.module').not('.first')
+        $('div').filter(':even') // parzyste div
+        $('div').filter(function(){
+            return $(this).text() == 'kot'
+        })
+
+        const $divs = $('div')
+        $divs.add('p')
+
+        //selectory
+        $('div:not(.red)')
+        $('div:visible')
+        $('div:animated')
+        $('.form :submit')
+        $(':text')
+        $(':radio')
+
+        //dodawanie css
+        const $el = $('#test')
+        $el.css({
+            color: 'red',
+            'background-color':' blue',
+            padding: 10
+        })
+
+        $el.css('padding', 10);
+
+        $('div').css('background-color', 'red');
+        $('div').css('background-color'); // zwroci jaki jest bg-color dla div
+
+        const $elements = $('div')
+        $elements.addClass('big important') // dodajemy dwie klasy
+        $elements.removeClass('big important') // usuwamy dwie klasy
+
+        const $img = $('img')
+        const src = $img.attr('src') // do src dodajemy zwyklego str ktr zostal tam umieszczony wiec nie trzeba $
+
+        if($img.attr('src')){ // pobiera atrybut
+            $img.removeAttr('tooltip'); // to usun atrybut tooltip
+            $img.attr('data-text', $img.attr('alt')); // ustawia atrybut
+            $img.attr({
+                alt: 'lorem ipsum',
+                title: 'lorem inpsum',
+                'data-innyniztext': 'nietext'
+            })
+        }
+
+        //prop
+        const $input = $('input:radio'); // czy jest zaznaczony input radio
+        if($input.is(':checked')){
+            $input.prop('disabled', true);
+        }else{
+            $input.removeProp('disabled');
+        }
+
+        //ustawiamy wartosc
+        const $input = $('input:text')
+        const zmienna = $input.val()
+        $input.val('nowa wartosc w inpucie')
+
+        //zdarzenia
+        function onMouseOverFn(){};
+
+        $('button').on('click', function(){})
+        $('button').on('mouseover', onMouseOverFn)
+
+        $('button').on({
+            click:function(){},
+            mouseover:function(){}
+        })
+
+        // przestac sluchac na konkretna fn
+        $('button').off('mouseover', onMouseOverFn)
+
+    </script>
+    
+</body>
+</html>

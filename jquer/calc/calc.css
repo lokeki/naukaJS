@@ -1,0 +1,41 @@
+body{
+    font-family: 'Oswald', sans-serif;
+}
+
+h2{
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+div.calc{
+    background-color: #5abcb9;
+    margin: 0 auto;
+    width: 33%;
+    height: auto;
+    padding: 1.5vw;
+    box-shadow: 2px 2px 5px gray;
+}
+
+button{
+    background-color: #ffd3bc;
+    font-size: 1.5vw;
+    border: none;
+    height: 2.6vw;
+    width: 2.6vw;
+    margin: 5px;
+    box-shadow: 2px 2px 5px gray;
+    transition: 0.2s;
+}
+
+button:hover{
+    background-color: #ffe1d4;
+}
+
+textarea{
+    margin: 0 auto;
+    font-size: 2vw;
+    width: 100%;
+    border: none;
+    text-align: right;
+}
